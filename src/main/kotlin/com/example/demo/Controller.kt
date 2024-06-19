@@ -23,4 +23,10 @@ class Controller(private val reserveRepository: ReserveRepository) {
         )
         return reserveRepository.save(saveModel);
     }
+    // テスト用のクラス
+    @PostMapping("/test")
+    fun postTest(@RequestBody testModel: TestModel): TestModel {
+        return testModel
+    }
+
 }
